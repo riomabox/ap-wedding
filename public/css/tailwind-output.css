@@ -434,6 +434,27 @@ video {
   display: none;
 }
 
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+
+@font-face {
+  font-family: "Broted-young-plant";
+
+  src: url("../fonts/BrotedYoungPlantRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Broted-young-plant-script;
+
+  src: url("../fonts/BrotedYoungPlantScriptRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Quiche-sans-light;
+
+  src: url("../fonts/Fontspring-DEMO-quichesans-light.otf") format("opentype");
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -559,9 +580,14 @@ video {
   justify-content: center;
 }
 
-.bg-slate-500 {
+.bg-primary-OlderSage {
   --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background-color: rgb(129 157 109 / var(--tw-bg-opacity));
+}
+
+.bg-secondary-Brl-01 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 228 189 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-200 {
@@ -585,8 +611,8 @@ video {
   font-family: Broted-young-plant-script;
 }
 
-.font-primary {
-  font-family: Blackout;
+.font-lato {
+  font-family: Lato;
 }
 
 .text-3xl {
@@ -601,28 +627,4 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-@font-face {
-  font-family: Blackout;
-
-  src: url("../fonts/Blackout.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Broted-young-plant";
-
-  src: url("../fonts/BrotedYoungPlantRegular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Broted-young-plant-script;
-
-  src: url("../fonts/BrotedYoungPlantScriptRegular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Quiche-sans-light;
-
-  src: url("../fonts/Fontspring-DEMO-quichesans-light.otf") format("opentype");
 }
