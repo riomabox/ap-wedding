@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
     />
+    <script
+      src="https://kit.fontawesome.com/d060ff9a43.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section
@@ -23,11 +27,25 @@
         <p class="bg-secondary-Brl-01 font-bypscript text-3xl font-semibold">
           Habib dan Fulan
         </p>
-        <p class="font-lato font-primary text-lg font-semibold">
+        <p class="font-primary font-lato text-lg font-semibold">
           Kami mengundang Anda untuk menghadiri acara pernikahan kami
         </p>
         <button class="bg-yellow-200" href="#">Buka Undangan</button>
       </main>
     </section>
+    <audio src="songs/Biru.mp3" controls></audio>
+    <button
+      onclick="buttonHandler()"
+      title="Contact Sale"
+      class="fixed bottom-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-xs text-white drop-shadow-lg duration-300 hover:animate-none hover:bg-blue-700 hover:drop-shadow-2xl"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </body>
+  <script>
+    // Do something when the button is clicked
+    function buttonHandler() {
+      alert("Hi there!");
+    }
+  </script>
 </html>
