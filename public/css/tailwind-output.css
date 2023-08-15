@@ -588,9 +588,18 @@ video {
   font-style: italic;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .flex {
@@ -605,6 +614,10 @@ video {
   width: 100%;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .items-center {
   align-items: center;
 }
@@ -613,9 +626,19 @@ video {
   justify-content: center;
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-primary-OlderSage {
   --tw-bg-opacity: 1;
   background-color: rgb(129 157 109 / var(--tw-bg-opacity));
+}
+
+.bg-primary-Olive {
+  --tw-bg-opacity: 1;
+  background-color: rgb(70 85 59 / var(--tw-bg-opacity));
 }
 
 .bg-secondary-Brl-01 {
@@ -632,12 +655,21 @@ video {
   padding: 0.75rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .font-byp {
   font-family: Broted-young-plant;
+}
+
+.font-qslight {
+  font-family: Quiche-sans-light;
 }
 
 .font-lato {
@@ -649,8 +681,48 @@ video {
   line-height: 2.25rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-Heading3 {
+  font-size: 36px;
+}
+
+.text-SubTitle {
+  font-size: 48px;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-Heading2 {
+  font-size: 36px;
+  letter-spacing: 0.4rem;
+}
+
+.text-BodySmall {
+  font-size: 20px;
+}
+
+.text-Body {
+  font-size: 28px;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-Heading1 {
+  font-size: 40px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -658,7 +730,24 @@ video {
   font-weight: 600;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
 .text-secondary-Brl-01 {
   --tw-text-opacity: 1;
   color: rgb(247 228 189 / var(--tw-text-opacity));
+}
+
+.text-secondary-Brl-02 {
+  --tw-text-opacity: 1;
+  color: rgb(231 205 148 / var(--tw-text-opacity));
 }
