@@ -7,6 +7,9 @@ module.exports = {
         byp: ["Broted-young-plant"],
         bypscript: ["Broted-young-plant-script"],
         qslight: ["Quiche-sans-light"],
+        qsmedium: ["Quiche-sans-medium"],
+        qsregular: ["Quiche-sans-regular"],
+        qsthin: ["Quiche-sans-thin"],
         lato: ["Lato"],
       },
       screens: {
@@ -30,7 +33,17 @@ module.exports = {
           Grey: "#B8B2A4",
         },
       },
-      fontSize: {},
+      fontSize: {
+        'MainTitle' : ['64px', {letterSpacing: '0.1rem'}],
+        'SubTitle' : ['48px'],
+        'Heading1' : '40px',
+        'Heading2' : ['36px', {letterSpacing: '0.4rem'}],
+        'Heading3'  : '36px',
+        'Heading4' : ['28px', {letterSpacing: '0.24rem'}],
+        'Body' : '28px',
+        'BodyLarge': '36px',
+        'BodySmall' : '20px'
+      },
     },
   },
   plugins: [],

@@ -7,7 +7,7 @@
   @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
 
   @font-face {
-    font-family: "Broted-young-plant";
+    font-family: Broted-young-plant;
     src: url("../fonts/BrotedYoungPlantRegular.ttf") format("truetype");
   }
 
@@ -19,5 +19,76 @@
   @font-face {
     font-family: Quiche-sans-light;
     src: url("../fonts/Fontspring-DEMO-quichesans-light.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: Quiche-sans-medium;
+    src: url("../fonts/Fontspring-DEMO-quichesans-medium.otf")
+      format("opentype");
+  }
+
+  @font-face {
+    font-family: Quiche-sans-regular;
+    src: url("../fonts/Fontspring-DEMO-quichesans-regular.otf")
+      format("opentype");
+  }
+
+  @font-face {
+    font-family: Quiche-sans-thin;
+    src: url("../fonts/Fontspring-DEMO-quichesans-thin.otf") format("opentype");
+  }
+}
+
+@layer components {
+  .MainTitle {
+    @apply font-qslight text-MainTitle;
+  }
+
+  .SubTitle {
+    @apply font-bypscript text-SubTitle;
+  }
+
+  .Heading1 {
+    @apply font-byp text-Heading1;
+  }
+
+  .Heading2 {
+    @apply font-qsmedium text-Heading2;
+  }
+
+  .Heading3 {
+    @apply font-byp text-Heading3;
+  }
+
+  .Heading4 {
+    @apply font-qsthin text-Heading4;
+  }
+
+  .BodyBold {
+    @apply font-lato text-Body font-bold;
+  }
+
+  .Body {
+    @apply font-lato text-Body font-normal;
+  }
+
+  .BodyItalic {
+    @apply font-lato text-Body font-normal italic;
+  }
+
+  .BodyBoldLarge {
+    @apply font-lato text-BodyLarge font-bold;
+  }
+
+  .BodySmall {
+    @apply font-lato text-BodySmall font-normal;
+  }
+
+  .BodySmallBold {
+    @apply font-lato text-BodySmall font-bold;
+  }
+
+  .BodySmallItalic {
+    @apply font-lato text-BodySmall font-normal italic;
   }
 }
