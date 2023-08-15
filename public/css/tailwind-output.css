@@ -438,7 +438,7 @@ video {
   @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
 
 @font-face {
-  font-family: "Broted-young-plant";
+  font-family: Broted-young-plant;
 
   src: url("../fonts/BrotedYoungPlantRegular.ttf") format("truetype");
 }
@@ -453,6 +453,26 @@ video {
   font-family: Quiche-sans-light;
 
   src: url("../fonts/Fontspring-DEMO-quichesans-light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Quiche-sans-medium;
+
+  src: url("../fonts/Fontspring-DEMO-quichesans-medium.otf")
+      format("opentype");
+}
+
+@font-face {
+  font-family: Quiche-sans-regular;
+
+  src: url("../fonts/Fontspring-DEMO-quichesans-regular.otf")
+      format("opentype");
+}
+
+@font-face {
+  font-family: Quiche-sans-thin;
+
+  src: url("../fonts/Fontspring-DEMO-quichesans-thin.otf") format("opentype");
 }
 
 *, ::before, ::after {
@@ -555,6 +575,19 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.MainTitle {
+  font-family: Quiche-sans-light;
+  font-size: 64px;
+  letter-spacing: 0.1rem;
+}
+
+.BodySmallItalic {
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -607,10 +640,6 @@ video {
   font-family: Broted-young-plant;
 }
 
-.font-bypscript {
-  font-family: Broted-young-plant-script;
-}
-
 .font-lato {
   font-family: Lato;
 }
@@ -627,4 +656,9 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.text-secondary-Brl-01 {
+  --tw-text-opacity: 1;
+  color: rgb(247 228 189 / var(--tw-text-opacity));
 }
