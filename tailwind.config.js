@@ -34,16 +34,25 @@ module.exports = {
         },
       },
       fontSize: {
-        'MainTitle' : ['64px', {letterSpacing: '0.1rem'}],
-        'SubTitle' : ['48px'],
-        'Heading1' : '40px',
+        'MainTitle' : ['2.5rem', {letterSpacing: '0.3rem', lineHeight: '100%'}],
+        'SubTitle' : ['1.5rem'],
+        'Heading1' : '24px',
         'Heading2' : ['36px', {letterSpacing: '0.4rem'}],
         'Heading3'  : '36px',
         'Heading4' : ['28px', {letterSpacing: '0.24rem'}],
-        'Body' : '28px',
+        'Body' : '14px',
         'BodyLarge': '36px',
         'BodySmall' : '20px'
       },
+      maxWidth: {
+        'mobile-invitation': '500px',
+      },
+      spacing: {
+        30: '7.5rem'
+      },
+      boxShadow: {
+        'MainTitle-outline': '0 0 0 0.5px #B49349'
+      }
     },
   },
   plugins: [],

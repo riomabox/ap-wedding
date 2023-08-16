@@ -15,47 +15,78 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="m-auto max-w-mobile-invitation shadow-2xl">
     <section
       id="hero"
-      class="flex h-full w-full items-center justify-center text-center"
+      class="flex h-full w-full flex-col items-center justify-center bg-neutral-White pb-12 text-center"
     >
-      <main>
-        <div class="m-auto max-w-lg bg-primary-OlderSage px-4">
-          <p
-            class="MainTitle bg-primary-OlderSage font-semibold text-secondary-Brl-01"
-          >
-            AGHNIA PUTRO
-          </p>
-          <p class="font-byp text-3xl font-semibold">Habib dan Fulan</p>
-          <div class="bg-primary-OlderSage">
-            <p class="font-primary max-w-lg font-lato text-sm">
-              Kami mengundang Anda untuk menghadiri acara pernikahan kami the
-              mighty bear and the poor kitty.
-            </p>
-          </div>
-          <div class="bg-primary-OlderSage">
-            <p
-              class="font-qslight text-Heading1 tracking-wider text-secondary-Brl-02"
-            >
-              AGHNIA
-            </p>
-            <p
-              class="font-qslight text-Heading1 tracking-wider text-secondary-Brl-02"
-            >
-              PUTRO
-            </p>
-            <p
-              class="font-qslight text-xl tracking-wider text-secondary-Brl-02"
-            >
-              AGHNIA PUTRI RAMADHANI
-            </p>
-          </div>
+      <!-- floral ornament -->
+      <div>
+        <img src="../public/images/floralornament-cover.png" />
+      </div>
 
-          <button class="bg-yellow-200" href="#">Buka Undangan</button>
+      <!-- cover-body -->
+      <div class="m-auto flex flex-col items-center gap-11">
+        <!-- nama-pengantin -->
+        <div class="MainTitle text-secondary-Brl-03">
+          <p>AGHNIA</p>
+          <p class="SubTitle">&</p>
+          <p>PUTRO</p>
         </div>
-      </main>
+        <!-- invitation-words -->
+        <div class="m-auto flex max-w-xs flex-col items-center gap-2">
+          <p class="Body text-neutral-Black">Kepada Yth Bapak/Ibu/Saudara/i</p>
+          <p class="Heading1 text-secondary-Brl-03">NORMALITA SAFITRI</p>
+          <p class="Body text-neutral-Black">
+            Kami mengundang Anda untuk menghadiri acara pernikahan kami
+          </p>
+        </div>
+        <!-- button -->
+        <div>
+          <button
+            class="BodyBold inline-flex items-center rounded-xl bg-primary-OlderSage px-3 py-2 text-neutral-White"
+            href="#"
+          >
+            <img src="../public/icons/envelope-open.svg" class="mr-2 h-4 w-4" />
+            Buka Undangan
+          </button>
+        </div>
+      </div>
     </section>
+    <main>
+      <div class="bg-primary-OlderSage px-4">
+        <p
+          class="MainTitle bg-primary-OlderSage font-semibold text-secondary-Brl-01"
+        >
+          AGHNIA PUTRO
+        </p>
+        <p class="font-byp text-3xl font-semibold">Habib dan Fulan</p>
+        <div class="bg-primary-OlderSage">
+          <p class="font-primary max-w-lg font-lato text-sm">
+            Kami mengundang Anda untuk menghadiri acara pernikahan kami the
+            mighty bear and the poor kitty.
+          </p>
+        </div>
+        <div class="bg-primary-OlderSage">
+          <p
+            class="font-qslight text-Heading1 tracking-wider text-secondary-Brl-02"
+          >
+            AGHNIA
+          </p>
+          <p
+            class="font-qslight text-Heading1 tracking-wider text-secondary-Brl-02"
+          >
+            PUTRO
+          </p>
+          <p class="font-qslight text-xl tracking-wider text-secondary-Brl-02">
+            AGHNIA PUTRI RAMADHANI
+          </p>
+        </div>
+
+        <button class="bg-yellow-200" href="#">Buka Undangan</button>
+      </div>
+    </main>
+
     <audio src="songs/Biru.mp3" controls></audio>
     <button
       onclick="buttonHandler()"
