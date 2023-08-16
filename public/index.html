@@ -16,6 +16,26 @@
     ></script>
   </head>
   <body>
+    <!-- Side Menu -->
+    <div
+      id="side-menu"
+      class="fixed right-[-250px] top-0 z-50 flex h-screen w-[240px] flex-col space-y-5 bg-gray-700 p-5 text-white duration-300"
+    >
+      <a
+        href="javascript:void(0)"
+        class="text-right text-4xl"
+        onclick="closeMenu()"
+        >&times;</a
+      >
+      <a class="hover:text-amber-500" href="#">Home</a>
+      <a class="hover:text-amber-500" href="#">About KindaCode.com</a>
+      <a class="hover:text-amber-500" href="#">Contact Us</a>
+      <a class="hover:text-amber-500" href="#">Terms of Service</a>
+      <a class="hover:text-amber-500" href="#">Privacy Policy</a>
+    </div>
+    <!-- Audio Player -->
+    <audio src="songs/Biru.mp3" autoplay loop></audio>
+    <!-- Home Page -->
     <section
       id="hero"
       class="flex h-full w-full items-center justify-center text-center"
@@ -56,25 +76,67 @@
         </div>
       </main>
     </section>
-    <audio src="songs/Biru.mp3" controls></audio>
+
+    <!-- Navigation Button -->
+    <!-- Hamburger Button -->
+    <!-- Digunakan untuk mengakses side menu -->
     <button
-      onclick="buttonHandler()"
-      title="Contact Sale"
+      id="hamburger-button"
+      onclick="sideMenuHandler()"
       class="fixed bottom-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg duration-300 hover:animate-none hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
     >
       <i class="fa-solid fa-bars"></i>
     </button>
+    <!-- Music Volume Button -->
+    <!-- Digunakan untuk mute/unmute backsound lagu -->
     <button
-      title="Contact Sale"
+      id="sound-button"
+      onclick="backsongsHandler()"
       class="fixed bottom-3 left-12 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg duration-300 hover:animate-none hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
     >
       <i class="fa-solid fa-volume-high"></i>
       <!-- <i class="fa-solid fa-volume-xmark"></i> -->
     </button>
   </body>
+
+  <!-- Javascript Code -->
   <script>
-    function buttonHandler() {
-      alert("Hi there!");
+    /*---- Make Side Menu Div to controlable ----*/
+    var sideMenu = document.getElementById("side-menu");
+    /*---- Make Hamburger Button to controlable ----*/
+    var hamburgerBtn = document.getElementById("hamburger-button");
+    /*---- Make Sound Button to controlable ----*/
+    var soundBtn = document.getElementById("sound-button");
+    /*---- Handler for Open Side Menu with change right property to 0 ----*/
+    function sideMenuHandler() {
+      /*---- If Side Menu Div invisible ----*/
+      if (sideMenu.classList.contains("right-[-250px]")) {
+        sideMenu.classList.remove("right-[-250px]");
+        sideMenu.classList.add("right-0");
+        hamburgerBtn.innerHTML = "<i class='fa-solid fa-x'></i>";
+      } else {
+        sideMenu.classList.remove("right-0");
+        sideMenu.classList.add("right-[-250px]");
+        hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>";
+      }
+    }
+    /*---- Handler for play backsongs ----*/
+    // function backsongsHandler() {
+    //   /*---- If backsongs is played ----*/
+    //   if (sideMenu.classList.contains("right-[-250px]")) {
+    //     sideMenu.classList.remove("right-[-250px]");
+    //     sideMenu.classList.add("right-0");
+    //     hamburgerBtn.innerHTML = "<i class='fa-solid fa-x'></i>";
+    //   } else {
+    //     sideMenu.classList.remove("right-0");
+    //     sideMenu.classList.add("right-[-250px]");
+    //     hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>";
+    //   }
+    // }
+    /*---- Handler for Close Side Menu with change right property to -250px ----*/
+    function closeMenu() {
+      sideMenu.classList.remove("right-0");
+      sideMenu.classList.add("right-[-250px]");
     }
   </script>
 </html>
