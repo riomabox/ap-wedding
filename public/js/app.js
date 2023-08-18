@@ -43,8 +43,11 @@ const bukaUndangan = async () => {
   const soundBtn = document.getElementById("sound-button");
   document.getElementById("open-invitation-button").disabled = true;
 
-  document.getElementById("open-invitation-img").src =
-    "../public/icons/loading-spinner.svg";
+  setTimeout(
+    (document.getElementById("open-invitation-img").src =
+      "../public/icons/loading-spinner.svg"),
+    3000,
+  );
   document.getElementById("open-invitation-img").classList.add("animate-spin");
 
   const BukaUndanganClicked = () => {
