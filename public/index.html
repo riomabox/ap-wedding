@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="max-w-mobile-invitation overflow-hidden m-auto shadow-2xl">
+  <body class="m-auto max-w-mobile-invitation overflow-hidden shadow-2xl">
     <!-- Side Menu -->
     <nav
       id="side-menu"
@@ -35,66 +35,23 @@
     </nav>
     <!-- Audio Player -->
     <!-- <audio src="songs/Biru.mp3" autoplay loop></audio> -->
-    <!-- Home Page -->
-
-    <!-- COVER PAGE -->
-    <section
-      id="hero"
-      class="flex h-screen flex-col items-center justify-center bg-neutral-White pb-16 text-center duration-300"
-    >
-      <!-- floral ornament -->
-      <div class="">
-        <img
-          src="../public/images/floralornament-cover.png"
-          width="92%"
-          height="92%"
-        />
-      </div>
-
-      <!-- cover-body -->
-      <div class="m-auto flex flex-col items-center gap-11">
-        <!-- nama-pengantin -->
-        <div class="MainTitle text-secondary-Brl-03">
-          <p>AGHNIA</p>
-          <p class="SubTitle">&</p>
-          <p>PUTRO</p>
-        </div>
-        <!-- invitation-words -->
-        <div class="m-auto flex max-w-xs flex-col items-center gap-2">
-          <p class="Body text-neutral-Black">Kepada Yth Bapak/Ibu/Saudara/i</p>
-          <p class="Heading3 tracking-wider text-secondary-Brl-03">
-            NORMALITA SAFITRI
-          </p>
-          <p class="Body text-neutral-Black">
-            Kami mengundang Anda untuk menghadiri acara pernikahan kami
-          </p>
-        </div>
-        <!-- button -->
-        <div>
-          <button
-            class="BodyBold inline-flex items-center rounded-xl bg-primary-OlderSage px-3 py-2 text-neutral-White"
-            href="#"
-            onclick="ModalHomepageHandler()"
-          >
-            <img src="../public/icons/envelope-open.svg" class="mr-2 h-4 w-4" />
-            Buka Undangan
-          </button>
-        </div>
-      </div>
-    </section>
-
     <!-- The Modal Home Page -->
     <div
       id="dialog"
       class="fixed left-1/2 top-1/2 z-50 w-[500px] -translate-x-1/2 -translate-y-1/2 space-y-5 transition-all duration-1000 ease-in-out"
     >
+      <!-- Home Page -->
       <section
         id="hero"
         class="flex h-full w-full flex-col items-center justify-center bg-neutral-White pb-12 text-center"
       >
         <!-- floral ornament -->
-        <div>
-          <img src="../public/images/floralornament-cover.png" />
+        <div class="">
+          <img
+            src="../public/images/floralornament-cover.png"
+            width="92%"
+            height="92%"
+          />
         </div>
 
         <!-- cover-body -->
@@ -110,7 +67,9 @@
             <p class="Body text-neutral-Black">
               Kepada Yth Bapak/Ibu/Saudara/i
             </p>
-            <p class="Heading1 text-secondary-Brl-03">NORMALITA SAFITRI</p>
+            <p class="Heading3 tracking-wider text-secondary-Brl-03">
+              NORMALITA SAFITRI
+            </p>
             <p class="Body text-neutral-Black">
               Kami mengundang Anda untuk menghadiri acara pernikahan kami
             </p>
@@ -129,6 +88,65 @@
             />
             Buka Undangan
           </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- CONTENT -->
+    <section
+      id="intro"
+      class="flex flex-col items-center bg-primary-OlderSage pb-16 text-center"
+    >
+      <!-- flower ornament -->
+      <div>
+        <img src="../public/images/floralornament-secondcover.png" />
+      </div>
+      <div class="max-w-40 flex flex-col items-center gap-16">
+        <!-- undangan pernikahan -->
+        <div>
+          <p class="Heading5 tracking-0.24 text-center text-secondary-Brl-02">
+            UNDANGAN PERNIKAHAN
+          </p>
+        </div>
+        <!-- nama pengantin -->
+        <div class="MainTitle text-neutral-White">
+          <p>AGHNIA</p>
+          <p class="SubTitle">&</p>
+          <p>PUTRO</p>
+        </div>
+        <!-- tanggal -->
+        <div>
+          <p class="Heading4 text-center text-secondary-Brl-02">
+            4 November 2023
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- pengantin -->
+    <section id="couple" class="flex flex-col items-center bg-neutral-White">
+      <!-- wave ornament -->
+      <div>
+        <img src="../public/images/wave-normal.png" />
+      </div>
+
+      <!-- main content -->
+      <div class="flex flex-col items-center gap-9 px-12 pb-12 pt-10">
+        <!-- opening  -->
+        <div class="flex w-full flex-col items-center gap-6 text-center">
+          <img
+            src="../public/images/wedding-ring.png"
+            width="48px"
+            height="48px"
+          />
+          <img src="../public/images/basmalah.png" width="125px" />
+          <p class="Body text-neutral-Black">
+            Assalamu’alaikum warahmatullah wabarakatuh
+          </p>
+          <p class="Body text-neutral-Black">
+            Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i
+            untuk menghadiri acara pernikahan kami
+          </p>
         </div>
         <!-- Aghnia -->
         <div class="flex w-full flex-col items-center gap-4 text-center">
