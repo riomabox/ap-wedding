@@ -15,6 +15,7 @@ module.exports = {
       screens: {
         tablet: "960px",
         desktop: "1280px",
+        mobile: '360px',
       },
       colors: {
         primary: {
@@ -57,6 +58,9 @@ module.exports = {
       letterSpacing: {
         0.24: '0.24rem'
       },
+      width: {
+        85: '85%'
+      }
     },
   },
   plugins: [],
