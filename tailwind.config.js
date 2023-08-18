@@ -37,16 +37,18 @@ module.exports = {
       fontSize: {
         'MainTitle' : ['2.25rem', {letterSpacing: '0.3rem', lineHeight: '100%'}],
         'SubTitle' : ['1.5rem'],
-        'Heading1' : '24px',
-        'Heading2' : ['36px', {letterSpacing: '0.4rem'}],
-        'Heading3' : ['1rem'],
+        'Heading1' : '20px',
+        'Heading2' : ['20px', {letterSpacing: '0.04rem'}],
+        'Heading3' : '20px',
+        'Heading4' : ['1rem'],
         'Body' : '14px',
         'BodyLarge': '36px',
         'BodySmall' : '20px'
       },
       maxWidth: {
         'mobile-invitation': '500px',
-        40: '160px'
+        40: '160px',
+        82: '20.5rem'
       },
       spacing: {
         30: '7.5rem',
@@ -60,6 +62,9 @@ module.exports = {
       },
       width: {
         85: '85%'
+      },
+      gap: {
+        9: '2.25rem'
       }
     },
   },

@@ -589,16 +589,27 @@ video {
 
 .Heading1 {
   font-family: Broted-young-plant;
-  font-size: 24px;
+  font-size: 20px;
+}
+
+.Heading2 {
+  font-family: Quiche-sans-medium;
+  font-size: 20px;
+  letter-spacing: 0.04rem;
 }
 
 .Heading3 {
+  font-family: Quiche-sans-light;
+  font-size: 20px;
+}
+
+.Heading4 {
   font-family: Broted-young-plant;
   font-size: 1rem;
 }
 
-.Heading4 {
-  font-family: Quiche-sans-thin;
+.Heading5 {
+  font-family: Quiche-sans-light;
   font-size: 1rem;
 }
 
@@ -612,6 +623,13 @@ video {
   font-family: Lato;
   font-size: 14px;
   font-weight: 400;
+}
+
+.BodyItalic {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .invisible {
@@ -694,6 +712,10 @@ video {
   width: 240px;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .max-w-40 {
   max-width: 160px;
 }
@@ -728,6 +750,18 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
@@ -768,9 +802,19 @@ video {
   padding: 1.25rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .py-2 {
@@ -778,8 +822,29 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-center {
@@ -804,6 +869,10 @@ video {
   letter-spacing: 0.24rem;
 }
 
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
 .text-neutral-Black {
   --tw-text-opacity: 1;
   color: rgb(54 41 11 / var(--tw-text-opacity));
@@ -812,6 +881,11 @@ video {
 .text-neutral-White {
   --tw-text-opacity: 1;
   color: rgb(255 248 238 / var(--tw-text-opacity));
+}
+
+.text-primary-OlderSage {
+  --tw-text-opacity: 1;
+  color: rgb(129 157 109 / var(--tw-text-opacity));
 }
 
 .text-secondary-Brl-02 {

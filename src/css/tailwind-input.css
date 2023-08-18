@@ -57,11 +57,15 @@
   }
 
   .Heading3 {
-    @apply text-Heading3 font-byp;
+    @apply text-Heading3 font-qslight;
   }
 
   .Heading4 {
-    @apply text-Heading3 font-qsthin;
+    @apply font-byp text-Heading4;
+  }
+
+  .Heading5 {
+    @apply font-qslight text-Heading4;
   }
 
   .BodyBold {
