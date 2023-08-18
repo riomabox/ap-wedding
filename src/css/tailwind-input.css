@@ -81,18 +81,18 @@
   }
 
   .BodyBoldLarge {
-    @apply font-lato text-BodyLarge font-bold;
+    @apply font-lato text-lg font-bold;
   }
 
   .BodySmall {
-    @apply font-lato text-BodySmall font-normal;
+    @apply font-lato text-xs font-normal;
   }
 
   .BodySmallBold {
-    @apply font-lato text-BodySmall font-bold;
+    @apply font-lato text-xs font-bold;
   }
 
   .BodySmallItalic {
-    @apply font-lato text-BodySmall font-normal italic;
+    @apply font-lato text-xs font-normal italic;
   }
 }
