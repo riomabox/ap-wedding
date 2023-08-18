@@ -36,19 +36,28 @@ function closeMenu() {
   sideMenu.classList.add("right-[-250px]");
 }
 
-var openButton = document.getElementById("open");
-var dialog = document.getElementById("dialog");
-var closeButton = document.getElementById("close");
-var overlay = document.getElementById("overlay");
+const bukaUndangan = async () => {
+  const body = document.getElementsByTagName("BODY")[0];
+  const modalHomepage = document.getElementById("dialog");
+  const hamburgerBtn = document.getElementById("hamburger-button");
+  const soundBtn = document.getElementById("sound-button");
+  document.getElementById("open-invitation-button").disabled = true;
 
-// show the overlay and the dialog
-openButton.addEventListener("click", function () {
-  dialog.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-});
+  document.getElementById("open-invitation-img").src =
+    "../public/icons/loading-spinner.svg";
+  document.getElementById("open-invitation-img").classList.add("animate-spin");
 
-// hide the overlay and the dialog
-closeButton.addEventListener("click", function () {
-  dialog.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
+  const BukaUndanganClicked = () => {
+    body.classList.remove("overflow-hidden");
+    modalHomepage.classList.add("top-[-100vh]");
+    hamburgerBtn.classList.remove("hidden");
+    soundBtn.classList.remove("hidden");
+  };
+
+  setTimeout(BukaUndanganClicked, 3000);
+  // document.getElementById('tombol-musik').style.display = 'block';
+  // audio.play();
+  // AOS.init();
+  // await login();
+  // timer();
+};
