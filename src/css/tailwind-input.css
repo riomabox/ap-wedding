@@ -57,11 +57,11 @@
   }
 
   .Heading3 {
-    @apply font-byp text-Heading3;
+    @apply text-Heading3 font-byp;
   }
 
   .Heading4 {
-    @apply font-qsthin text-Heading4;
+    @apply text-Heading3 font-qsthin;
   }
 
   .BodyBold {
