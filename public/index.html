@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Wedding of Aghnia & Putro</title>
     <link rel="stylesheet" href="css/tailwind-output.css" />
     <link
       rel="stylesheet"
@@ -15,9 +15,9 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="max-w-mobile-invitation m-auto shadow-2xl">
+  <body class="max-w-mobile-invitation overflow-hidden m-auto shadow-2xl">
     <!-- Side Menu -->
-    <div
+    <nav
       id="side-menu"
       class="fixed right-[-250px] top-0 z-50 flex h-screen w-[240px] flex-col space-y-5 bg-gray-700 p-5 text-white duration-300"
     >
@@ -32,15 +32,15 @@
       <a class="hover:text-amber-500" href="#">Contact Us</a>
       <a class="hover:text-amber-500" href="#">Terms of Service</a>
       <a class="hover:text-amber-500" href="#">Privacy Policy</a>
-    </div>
+    </nav>
     <!-- Audio Player -->
-    <audio src="songs/Biru.mp3" autoplay loop></audio>
+    <!-- <audio src="songs/Biru.mp3" autoplay loop></audio> -->
     <!-- Home Page -->
 
     <!-- COVER PAGE -->
     <section
       id="hero"
-      class="flex h-screen flex-col items-center justify-center bg-neutral-White pb-16 text-center"
+      class="flex h-screen flex-col items-center justify-center bg-neutral-White pb-16 text-center duration-300"
     >
       <!-- floral ornament -->
       <div class="">
@@ -74,6 +74,7 @@
           <button
             class="BodyBold inline-flex items-center rounded-xl bg-primary-OlderSage px-3 py-2 text-neutral-White"
             href="#"
+            onclick="ModalHomepageHandler()"
           >
             <img src="../public/icons/envelope-open.svg" class="mr-2 h-4 w-4" />
             Buka Undangan
@@ -82,61 +83,52 @@
       </div>
     </section>
 
-    <!-- CONTENT -->
-    <section
-      id="intro"
-      class="flex flex-col items-center bg-primary-OlderSage pb-16 text-center"
+    <!-- The Modal Home Page -->
+    <div
+      id="dialog"
+      class="fixed left-1/2 top-1/2 z-50 w-[500px] -translate-x-1/2 -translate-y-1/2 space-y-5 transition-all duration-1000 ease-in-out"
     >
-      <!-- flower ornament -->
-      <div>
-        <img src="../public/images/floralornament-secondcover.png" />
-      </div>
-      <div class="max-w-40 flex flex-col items-center gap-16">
-        <!-- undangan pernikahan -->
+      <section
+        id="hero"
+        class="flex h-full w-full flex-col items-center justify-center bg-neutral-White pb-12 text-center"
+      >
+        <!-- floral ornament -->
         <div>
-          <p class="Heading5 text-center tracking-0.24 text-secondary-Brl-02">
-            UNDANGAN PERNIKAHAN
-          </p>
+          <img src="../public/images/floralornament-cover.png" />
         </div>
-        <!-- nama pengantin -->
-        <div class="MainTitle text-neutral-White">
-          <p>AGHNIA</p>
-          <p class="SubTitle">&</p>
-          <p>PUTRO</p>
-        </div>
-        <!-- tanggal -->
-        <div>
-          <p class="Heading4 text-center text-secondary-Brl-02">
-            4 November 2023
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- pengantin -->
-    <section id="couple" class="flex flex-col items-center bg-neutral-White">
-      <!-- wave ornament -->
-      <div>
-        <img src="../public/images/wave-normal.png" />
-      </div>
-
-      <!-- main content -->
-      <div class="flex flex-col items-center gap-9 px-12 pb-12 pt-10">
-        <!-- opening  -->
-        <div class="flex w-full flex-col items-center gap-6 text-center">
-          <img
-            src="../public/images/wedding-ring.png"
-            width="48px"
-            height="48px"
-          />
-          <img src="../public/images/basmalah.png" width="125px" />
-          <p class="Body text-neutral-Black">
-            Assalamu’alaikum warahmatullah wabarakatuh
-          </p>
-          <p class="Body text-neutral-Black">
-            Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i
-            untuk menghadiri acara pernikahan kami
-          </p>
+        <!-- cover-body -->
+        <div class="m-auto flex flex-col items-center gap-11">
+          <!-- nama-pengantin -->
+          <div class="MainTitle text-secondary-Brl-03">
+            <p>AGHNIA</p>
+            <p class="SubTitle">&</p>
+            <p>PUTRO</p>
+          </div>
+          <!-- invitation-words -->
+          <div class="m-auto flex max-w-xs flex-col items-center gap-2">
+            <p class="Body text-neutral-Black">
+              Kepada Yth Bapak/Ibu/Saudara/i
+            </p>
+            <p class="Heading1 text-secondary-Brl-03">NORMALITA SAFITRI</p>
+            <p class="Body text-neutral-Black">
+              Kami mengundang Anda untuk menghadiri acara pernikahan kami
+            </p>
+          </div>
+          <!-- button -->
+          <button
+            id="open-invitation-button"
+            class="BodyBold inline-flex items-center rounded-xl bg-primary-OlderSage px-3 py-2 text-neutral-White transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-primary-Olive"
+            href="#"
+            onclick="bukaUndangan()"
+          >
+            <img
+              id="open-invitation-img"
+              src="../public/icons/envelope-open.svg"
+              class="mr-2 h-4 w-4"
+            />
+            Buka Undangan
+          </button>
         </div>
         <!-- Aghnia -->
         <div class="flex w-full flex-col items-center gap-4 text-center">
@@ -200,7 +192,7 @@
     <button
       id="hamburger-button"
       onclick="sideMenuHandler()"
-      class="fixed bottom-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg duration-300 hover:animate-none hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
+      class="fixed bottom-3 left-3 z-10 hidden h-8 w-8 items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg duration-300 hover:animate-none hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
     >
       <i class="fa-solid fa-bars"></i>
     </button>
@@ -209,7 +201,7 @@
     <button
       id="sound-button"
       onclick="backsongsHandler()"
-      class="fixed bottom-3 left-12 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg duration-300 hover:animate-none hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
+      class="fixed bottom-3 left-12 z-10 hidden h-8 w-8 items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg duration-300 hover:animate-none hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
     >
       <i class="fa-solid fa-volume-high"></i>
       <!-- <i class="fa-solid fa-volume-xmark"></i> -->
@@ -217,43 +209,5 @@
   </body>
 
   <!-- Javascript Code -->
-  <script>
-    /*---- Make Side Menu Div to controlable ----*/
-    var sideMenu = document.getElementById("side-menu");
-    /*---- Make Hamburger Button to controlable ----*/
-    var hamburgerBtn = document.getElementById("hamburger-button");
-    /*---- Make Sound Button to controlable ----*/
-    var soundBtn = document.getElementById("sound-button");
-    /*---- Handler for Open Side Menu with change right property to 0 ----*/
-    function sideMenuHandler() {
-      /*---- If Side Menu Div invisible ----*/
-      if (sideMenu.classList.contains("right-[-250px]")) {
-        sideMenu.classList.remove("right-[-250px]");
-        sideMenu.classList.add("right-0");
-        hamburgerBtn.innerHTML = "<i class='fa-solid fa-x'></i>";
-      } else {
-        sideMenu.classList.remove("right-0");
-        sideMenu.classList.add("right-[-250px]");
-        hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>";
-      }
-    }
-    /*---- Handler for play backsongs ----*/
-    // function backsongsHandler() {
-    //   /*---- If backsongs is played ----*/
-    //   if (sideMenu.classList.contains("right-[-250px]")) {
-    //     sideMenu.classList.remove("right-[-250px]");
-    //     sideMenu.classList.add("right-0");
-    //     hamburgerBtn.innerHTML = "<i class='fa-solid fa-x'></i>";
-    //   } else {
-    //     sideMenu.classList.remove("right-0");
-    //     sideMenu.classList.add("right-[-250px]");
-    //     hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>";
-    //   }
-    // }
-    /*---- Handler for Close Side Menu with change right property to -250px ----*/
-    function closeMenu() {
-      sideMenu.classList.remove("right-0");
-      sideMenu.classList.add("right-[-250px]");
-    }
-  </script>
+  <script src="./js/app.js"></script>
 </html>
