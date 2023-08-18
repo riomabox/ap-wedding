@@ -12,7 +12,7 @@
 /build
 
 # Generated files
-/public/css/tailwind-output.css
+# /public/css/tailwind-output.css
 
 # misc
 .DS_Store
