@@ -33,10 +33,8 @@
       <a class="hover:text-amber-500" href="#">Terms of Service</a>
       <a class="hover:text-amber-500" href="#">Privacy Policy</a>
     </nav>
-    <!-- Audio Player -->
-    <!-- <audio src="songs/Biru.mp3" autoplay loop></audio> -->
-    <!-- The Modal Home Page -->
 
+    <!-- The Modal Home Page -->
     <!-- Change to Hidden -->
     <div
       id="dialog"
@@ -252,8 +250,11 @@
     <!-- Digunakan untuk mute/unmute backsound lagu -->
     <button
       id="sound-button"
-      onclick="backsongsHandler()"
-      class="fixed bottom-3 left-12 z-10 hidden h-8 w-8 animate-fade-up items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg duration-300 animate-duration-300 animate-once animate-ease-out hover:animate-none hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
+      onclick="backsongsHandler(this)"
+      class="fixed bottom-3 left-12 z-10 hidden h-8 w-8 animate-fade-up items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg animate-duration-300 animate-once animate-ease-out hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
+      type="button"
+      data-status="true"
+      data-url="songs/Biru.mp3"
     >
       <i class="fa-solid fa-volume-high"></i>
       <!-- <i class="fa-solid fa-volume-xmark"></i> -->

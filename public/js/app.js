@@ -1,3 +1,35 @@
+const audio = (() => {
+  let instance = null;
+
+  let createOrGet = () => {
+    if (instance instanceof HTMLAudioElement) {
+      return instance;
+    }
+
+    instance = new Audio();
+    instance.autoplay = true;
+    instance.src = document
+      .getElementById("sound-button")
+      .getAttribute("data-url");
+    instance.load();
+    instance.currentTime = 0;
+    instance.volume = 1;
+    instance.muted = false;
+    instance.loop = true;
+
+    return instance;
+  };
+
+  return {
+    play: () => {
+      createOrGet().play();
+    },
+    pause: () => {
+      createOrGet().pause();
+    },
+  };
+})();
+
 const escapeHtml = (unsafe) => {
   return unsafe
     .replace(/&/g, "&amp;")
@@ -27,18 +59,18 @@ function sideMenuHandler() {
   }
 }
 /*---- Handler for play backsongs ----*/
-// function backsongsHandler() {
-//   /*---- If backsongs is played ----*/
-//   if (sideMenu.classList.contains("right-[-250px]")) {
-//     sideMenu.classList.remove("right-[-250px]");
-//     sideMenu.classList.add("right-0");
-//     hamburgerBtn.innerHTML = "<i class='fa-solid fa-x'></i>";
-//   } else {
-//     sideMenu.classList.remove("right-0");
-//     sideMenu.classList.add("right-[-250px]");
-//     hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>";
-//   }
-// }
+function backsongsHandler(btn) {
+  /*---- If backsongs is not played ----*/
+  if (btn.getAttribute("data-status").toString() != "true") {
+    btn.setAttribute("data-status", "true");
+    audio.play();
+    btn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+  } else {
+    btn.setAttribute("data-status", "false");
+    audio.pause();
+    btn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+  }
+}
 /*---- Handler for Close Side Menu with change right property to -250px ----*/
 function closeMenu() {
   sideMenu.classList.remove("right-0");
@@ -61,6 +93,7 @@ const bukaUndangan = async () => {
     modalHomepage.classList.add("top-[-100vh]");
     hamburgerBtn.classList.remove("hidden");
     soundBtn.classList.remove("hidden");
+    audio.play();
   };
 
   setTimeout(BukaUndanganClicked, 3000);
