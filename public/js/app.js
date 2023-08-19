@@ -113,7 +113,6 @@ const opacity = () => {
   let modal = new Promise((res) => {
     let clear = null;
     clear = setInterval(() => {
-      console.info("clear : ", clear);
       if (document.getElementById("dialog").classList.contains("fixed")) {
         clearInterval(clear);
         res();
@@ -131,7 +130,6 @@ const opacity = () => {
       if (op >= 0) {
         op -= 0.025;
         document.getElementById("loadPage").style.opacity = op;
-        console.info("info: ", op);
       } else {
         clearInterval(clear);
         // document.getElementById("loadPage").remove();
@@ -141,12 +139,16 @@ const opacity = () => {
   });
 };
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+  if (document.getElementById("loadPage").classList.contains("hidden")) {
+    document.getElementById("loadPage").classList.remove("hidden");
+  }
+};
+
 window.addEventListener(
   "load",
   async () => {
-    if (document.getElementById("loadPage").classList.contains("hidden")) {
-      document.getElementById("loadPage").classList.replace("hidden", "flex");
-    }
     let modal = document.getElementById("dialog");
     let name = new URLSearchParams(window.location.search).get("to") ?? "";
 
