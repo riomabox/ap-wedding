@@ -57,7 +57,7 @@
   }
 
   .Heading3 {
-    @apply text-Heading3 font-qslight;
+    @apply font-qslight text-Heading3;
   }
 
   .Heading4 {
@@ -88,11 +88,11 @@
     @apply font-lato text-xs font-normal;
   }
 
-  .BodySmallBold {
+  .BodyBoldSmall {
     @apply font-lato text-xs font-bold;
   }
 
-  .BodySmallItalic {
+  .BodyItalicSmall {
     @apply font-lato text-xs font-normal italic;
   }
 }

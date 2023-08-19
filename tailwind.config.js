@@ -21,6 +21,8 @@ module.exports = {
         primary: {
           OlderSage: "#819D6D",
           Olive: "#46553B",
+          MatchaMilk: "#B5C9A7",
+          MatchaFade: "#D0DFC6"
         },
         secondary: {
           "Brl-01": "#F7E4BD",
@@ -48,7 +50,8 @@ module.exports = {
       maxWidth: {
         'mobile-invitation': '500px',
         40: '160px',
-        82: '20.5rem'
+        82: '20.5rem',
+        107: '26.75rem'
       },
       spacing: {
         30: '7.5rem',
@@ -61,10 +64,21 @@ module.exports = {
         0.24: '0.24rem'
       },
       width: {
-        85: '85%'
+        19: '4.75rem',
+        85: '85%',
+        65: '16.25rem',
+        78: '19.5rem',
+        '9/10': '90%',
+      },
+      height: {
+        19: '4.75rem',
+        32.2: '32.2px'
       },
       gap: {
         9: '2.25rem'
+      },
+      borderRadius: {
+        '4xl':'1.25rem'
       }
     },
   },
