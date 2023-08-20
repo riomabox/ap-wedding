@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/**/*.{html,js}"],
+  content:{
+    relative: true,
+    transform: (content) => content.replace(/taos:/g, ''),
+    files: ["./public/**/*.{html,js}", ]
+  } , 
   theme: {
     extend: {
       fontFamily: {
@@ -21,7 +25,7 @@ module.exports = {
         primary: {
           OlderSage: "#819D6D",
           Olive: "#46553B",
-          MatchaMilk: "#B5C9A7",
+          MatchaMilk: "#A7C294",
           MatchaFade: "#D0DFC6"
         },
         secondary: {
@@ -35,6 +39,8 @@ module.exports = {
           Black: "#36290B",
           Grey: "#B8B2A4",
         },
+        overlay: 'rgba(40,40,40,0.3)',
+        MatchaMilkTrans: 'rgba(167, 194, 148, 0.7)'
       },
       fontSize: {
         'MainTitle' : ['2.25rem', {letterSpacing: '0.3rem', lineHeight: '100%'}],
@@ -65,7 +71,6 @@ module.exports = {
       },
       width: {
         19: '4.75rem',
-        85: '85%',
         65: '16.25rem',
         78: '19.5rem',
         '9/10': '90%',
@@ -79,10 +84,16 @@ module.exports = {
       },
       borderRadius: {
         '4xl':'1.25rem'
-      }
+      },
     },
   },
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
+  ],
   plugins: [
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
+    require('taos/plugin')
   ],
 };

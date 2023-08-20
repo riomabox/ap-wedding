@@ -5,16 +5,19 @@ var hamburgerBtn = document.getElementById("hamburger-button");
 /*---- Make Sound Button to controlable ----*/
 var soundBtn = document.getElementById("sound-button");
 /*---- Handler for Open Side Menu with change right property to 0 ----*/
+var overlay = document.getElementById("overlay");
 function sideMenuHandler() {
   /*---- If Side Menu Div invisible ----*/
-  if (sideMenu.classList.contains("right-[-250px]")) {
-    sideMenu.classList.remove("right-[-250px]");
+  if (sideMenu.classList.contains("right-[-75vw]")) {
+    sideMenu.classList.remove("right-[-75vw]");
     sideMenu.classList.add("right-0");
     hamburgerBtn.innerHTML = "<i class='fa-solid fa-x'></i>";
+    overlay.style.display = "block";
   } else {
     sideMenu.classList.remove("right-0");
-    sideMenu.classList.add("right-[-250px]");
+    sideMenu.classList.add("right-[-75vw]");
     hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>";
+    overlay.style.display = "none";
   }
 }
 /*---- Handler for play backsongs ----*/
@@ -33,7 +36,10 @@ function sideMenuHandler() {
 /*---- Handler for Close Side Menu with change right property to -250px ----*/
 function closeMenu() {
   sideMenu.classList.remove("right-0");
-  sideMenu.classList.add("right-[-250px]");
+  sideMenu.classList.add("right-[-75vw]");
+  overlay.style.display = "none";
+  if (hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>") {hamburgerBtn.innerHTML = "<i class='fa-solid fa-bars'></i>"};
+  
 }
 
 const bukaUndangan = async () => {
@@ -42,6 +48,9 @@ const bukaUndangan = async () => {
   const hamburgerBtn = document.getElementById("hamburger-button");
   const soundBtn = document.getElementById("sound-button");
   document.getElementById("open-invitation-button").disabled = true;
+  const undanganTitle = document.getElementById("undangan-title");
+  const namaTitle = document.getElementById("nama-title");
+  const tanggalTitle = document.getElementById("tanggal-title");
 
   setTimeout(
     (document.getElementById("open-invitation-img").src =
@@ -55,6 +64,9 @@ const bukaUndangan = async () => {
     modalHomepage.classList.add("top-[-100vh]");
     hamburgerBtn.classList.remove("hidden");
     soundBtn.classList.remove("hidden");
+    undanganTitle.classList.add("animate-fade-up","animate-duration-1000","animate-once");
+    namaTitle.classList.add("animate-fade-up","animate-duration-1000","animate-once", "animate-delay-[700ms]");
+    tanggalTitle.classList.add("animate-fade-up","animate-duration-1000","animate-once", "animate-delay-[1400ms]");
   };
 
   setTimeout(BukaUndanganClicked, 3000);

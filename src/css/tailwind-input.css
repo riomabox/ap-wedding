@@ -37,6 +37,38 @@
     font-family: Quiche-sans-thin;
     src: url("../fonts/Fontspring-DEMO-quichesans-thin.otf") format("opentype");
   }
+
+  .font-outline-gold {
+    -webkit-text-stroke: 1px #b49349;
+  }
+
+  .font-outline-gold-half {
+    -webkit-text-stroke: 0.5px #b49349;
+  }
+
+  .font-outline-beige {
+    -webkit-text-stroke: 0.5px #e7cd94;
+  }
+
+  .font-outline-white {
+    -webkit-text-stroke: 1px #fff8ee;
+  }
+
+  .font-outline-white-half {
+    -webkit-text-stroke: 0.5px #fff8ee;
+  }
+
+  .font-outline-OlderSage {
+    -webkit-text-stroke: 1px #819d6d;
+  }
+
+  .font-outline-brown-half {
+    -webkit-text-stroke: 0.5px #5e460f;
+  }
+
+  .font-outline-sand-half {
+    -webkit-text-stroke: 0.5px #f7e4bd;
+  }
 }
 
 @layer components {
