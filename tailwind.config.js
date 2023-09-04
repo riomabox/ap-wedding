@@ -40,7 +40,7 @@ module.exports = {
           Grey: "#B8B2A4",
         },
         overlay: 'rgba(40,40,40,0.3)',
-        MatchaMilkTrans: 'rgba(167, 194, 148, 0.7)'
+        MatchaMilkTrans: 'rgba(167, 194, 148, 0.90)'
       },
       fontSize: {
         'MainTitle' : ['2.25rem', {letterSpacing: '0.3rem', lineHeight: '100%'}],

@@ -75,4 +75,30 @@ const bukaUndangan = async () => {
   // AOS.init();
   // await login();
   // timer();
+
+  const timer = () => {
+    let weddingDate = document.getElementById('countdown').getAttribute('data-waktu');
+    let countdownDate = (new Date(weddingDate)).getTime();
+    let time = null;
+    let distance = null;
+  
+    time = setInterval(()=>{
+        distance = countdownDate - (new Date()).getTime();
+  
+        if (distance < 0) {
+          clearInterval(time);
+          time = null;
+          return true;
+        }
+  
+        document.getElementById('hari').innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById('jam').innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+        document.getElementById('menit').innerHTML = Math.floor((distance % (1000 * 60 * 60))/ (1000 * 60));
+        document.getElementById('detik').innerHTML = Math.floor((distance % (1000 * 60))/ (1000));
+
+    }, 1000)
+  }
+
+  timer()
 };
+
