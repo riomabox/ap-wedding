@@ -889,6 +889,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .max-w-107 {
   max-width: 26.75rem;
 }
@@ -1096,7 +1100,7 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 }
 
 .bg-MatchaMilkTrans {
-  background-color: rgba(167, 194, 148, 0.7);
+  background-color: rgba(167, 194, 148, 0.90);
 }
 
 .bg-neutral-Grey {
