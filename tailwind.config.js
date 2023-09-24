@@ -26,7 +26,8 @@ module.exports = {
           OlderSage: "#819D6D",
           Olive: "#46553B",
           MatchaMilk: "#A7C294",
-          MatchaFade: "#D0DFC6"
+          MatchaFade: "#D0DFC6",
+          SageBase: "#e8ead6"
         },
         secondary: {
           "Brl-01": "#F7E4BD",

@@ -396,8 +396,9 @@
               <button
                 id="copy-bni"
                 class="BodyBoldSmall inline-flex items-center rounded-xl bg-secondary-Brl-03 px-3 py-2 text-neutral-White hover:bg-secondary-Brl-04"
-                href="#"
-                onclick=""
+                onclick="copyText(this)"
+                data-account="0497001406"
+                autofocus
               >
                 Salin Nomor Rekening
               </button>
@@ -417,8 +418,9 @@
               <button
                 id="copy-bni"
                 class="BodyBoldSmall inline-flex items-center rounded-xl bg-secondary-Brl-03 px-3 py-2 text-neutral-White hover:bg-secondary-Brl-04"
-                href="#"
-                onclick=""
+                onclick="copyText(this)"
+                data-account="050701019445500"
+                autofocus
               >
                 Salin Nomor Rekening
               </button>
@@ -470,13 +472,16 @@
               <!-- jumlah orang -->
               <div class="flex-center flex flex-col gap-2">
                 <p class="BodyBold text-neutral-Black">Jumlah Orang</p>
-                <input
-                  type="number"
+                <select
+                  name="jml-orang"
                   id="jml-orang"
-                  placeholder="Jumlah orang"
-                  max="100"
-                  class="Body w-full rounded-lg border border-solid border-secondary-Brl-03 px-2 py-1 focus:border-primary-OlderSage focus:outline-none focus:ring-2 focus:ring-primary-MatchaFade"
-                />
+                  placeholder="Jumlah Orang"
+                  class="Body h-32.2 w-full rounded-lg border border-solid border-secondary-Brl-03 bg-white px-2 py-1 focus:border-primary-OlderSage focus:outline-none focus:ring-2 focus:ring-primary-MatchaFade"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="1">2</option>
+                </select>
               </div>
             </div>
             <!-- Ucapan&Doa -->

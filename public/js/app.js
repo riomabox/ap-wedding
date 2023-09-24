@@ -76,6 +76,8 @@ const bukaUndangan = async () => {
   // await login();
   // timer();
 
+
+  
   const timer = () => {
     let weddingDate = document.getElementById('countdown').getAttribute('data-waktu');
     let countdownDate = (new Date(weddingDate)).getTime();
@@ -101,4 +103,19 @@ const bukaUndangan = async () => {
 
   timer()
 };
+
+  const copyText = (button) => {
+    // const dataAccount = button.getAttribute("data-account");
+    const dataAccount = button.getAttribute("data-account");
+    navigator.clipboard.writeText(dataAccount);
+    let buttonText = button.innerHTML;
+    button.innerHTML = `Tersalin`;
+    button.disabled = true;
+
+    setTimeout(()=>{
+      button.innerHTML = buttonText;
+      button.disabled = false;
+      button.focus();
+    }, 1500);
+  }
 
