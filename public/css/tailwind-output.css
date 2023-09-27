@@ -503,6 +503,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   -webkit-text-stroke: 0.5px #f7e4bd;
 }
 
+.font-outline-darker-Olive {
+  -webkit-text-stroke: 0.5px #46553b;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -777,6 +781,14 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   margin-top: 0.5rem;
 }
 
+.mt-\[-4px\] {
+  margin-top: -4px;
+}
+
+.mt-\[-2px\] {
+  margin-top: -2px;
+}
+
 .block {
   display: block;
 }
@@ -821,6 +833,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   height: 2rem;
 }
 
+.h-\[32\.2px\] {
+  height: 32.2px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -847,6 +863,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 .w-48 {
   width: 12rem;
+}
+
+.w-6\/12 {
+  width: 50%;
 }
 
 .w-72 {
@@ -1068,6 +1088,11 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   border-style: solid;
 }
 
+.border-neutral-Grey {
+  --tw-border-opacity: 1;
+  border-color: rgb(184 178 164 / var(--tw-border-opacity));
+}
+
 .border-secondary-Brl-03 {
   --tw-border-opacity: 1;
   border-color: rgb(180 147 73 / var(--tw-border-opacity));
@@ -1097,6 +1122,11 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   background-color: rgb(70 85 59 / var(--tw-bg-opacity));
 }
 
+.bg-primary-SageBase {
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 234 214 / var(--tw-bg-opacity));
+}
+
 .bg-secondary-Brl-02 {
   --tw-bg-opacity: 1;
   background-color: rgb(231 205 148 / var(--tw-bg-opacity));
@@ -1119,11 +1149,6 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-primary-SageBase {
-  --tw-bg-opacity: 1;
-  background-color: rgb(232 234 214 / var(--tw-bg-opacity));
 }
 
 .p-5 {
@@ -1198,12 +1223,24 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   padding-top: 2rem;
 }
 
+.pt-12 {
+  padding-top: 3rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .text-right {
   text-align: right;
+}
+
+.font-byp {
+  font-family: Broted-young-plant;
+}
+
+.font-lato {
+  font-family: Lato;
 }
 
 .font-qsmedium {
@@ -1217,6 +1254,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 .text-Body {
   font-size: 14px;
+}
+
+.text-Heading4 {
+  font-size: 1rem;
 }
 
 .text-xs {

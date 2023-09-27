@@ -1,3 +1,6 @@
+const root = document.getElementsByTagName("html")[0];
+root.setAttribute('class', 'bg-primary-SageBase')
+
 const audio = (() => {
   let instance = null;
 
@@ -181,6 +184,53 @@ const copyText = (button) => {
     button.focus();
   }, 1500);
 }
+
+
+
+
+let kehadiran = document.getElementById("kehadiran");
+let nama = document.getElementById("nama");
+let jumlahOrang = document.getElementById("jml-orang");
+let ucapan = document.getElementById("ucapan");
+
+const sendWish = () => {
+  if(nama.value.length === 0) {
+    alert("Namanya diisi dulu yaa");
+  } else if (nama.value.length >= 50) {
+    alert("Namanya kepanjangan ih");
+  }
+
+  if(kehadiran.value === 'not-selected') {
+    alert("Silahkan isi kehadiran");
+  } 
+
+  if(jumlahOrang.value.length === 0) {
+    alert("Silahkan isi jumlah kehadiran");
+  } else if(jumlahOrang.value >= 10) {
+    alert("Mohon maaf, jumlah kehadiran tidak boleh lebih dari 5 orang")
+  }
+
+  if(ucapan.value.length === 0) {
+    alert("Silahkan isi ucapan dan doa");
+  }
+}
+
+
+
+const enableGuestNum = () => {
+    if(kehadiran.value === 'present') {
+      jumlahOrang.disabled = false;
+      jumlahOrang.style.borderColor = '#B49349'
+    } else {
+      jumlahOrang.disabled = true;
+      jumlahOrang.style.borderColor = '#B8B2A4'
+      
+    }
+}
+
+
+
+
 
 const progressBar = (() => {
   let bar = document.getElementById("bar");

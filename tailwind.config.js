@@ -34,6 +34,7 @@ module.exports = {
           "Brl-02": "#E7CD94",
           "Brl-03": "#B49349",
           "Brl-04": "#5E460F",
+          "Brl-05": "#9F7C2E"
         },
         neutral: {
           White: "#FFF8EE",
@@ -65,7 +66,8 @@ module.exports = {
         21: '5.25rem'
       },
       boxShadow: {
-        'MainTitle-outline': '0 0 0 0.5px #B49349'
+        'MainTitle-outline': '0 0 0 0.5px #B49349',
+        'Header4-outline': '0 0 0 0.5px #9F7C2E'
       },
       letterSpacing: {
         0.24: '0.24rem'

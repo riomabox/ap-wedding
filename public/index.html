@@ -75,7 +75,7 @@
         <div class="m-auto flex flex-col items-center gap-11">
           <!-- nama-pengantin -->
           <div
-            class="MainTitle font-outline-gold animate-fade-up text-secondary-Brl-03 animate-duration-1000 animate-once"
+            class="MainTitle flex flex-col gap-2 font-outline-gold animate-fade-up text-secondary-Brl-03 animate-duration-1000 animate-once"
           >
             <p>AGHNIA</p>
             <p class="SubTitle">&</p>
@@ -149,7 +149,7 @@
         </div>
         <!-- nama pengantin -->
         <div
-          class="MainTitle font-outline-white text-neutral-White"
+          class="MainTitle font-outline-white text-neutral-White flex flex-col gap-2"
           id="nama-title"
         >
           <p>AGHNIA</p>
@@ -175,7 +175,7 @@
       </div>
 
       <!-- main content -->
-      <div class="flex flex-col items-center gap-10 px-6 pb-10 pt-10">
+      <div class="flex flex-col items-center gap-10 px-6 pb-12 pt-10">
         <!-- opening  -->
         <div
           class="taos:translate-y-[25px] taos:opacity-0 flex w-full flex-col items-center gap-6 text-center duration-[1000ms]"
@@ -238,14 +238,14 @@
       </div>
 
       <div>
-        <img src="../public/images/wave-vh-reversed.png" />
+        <img src="../public/images/abstract-wave.png" />
       </div>
     </section>
 
     <!-- ayat Ar-Rum -->
     <section
       id="ayat"
-      class="flex flex-col items-center bg-primary-OlderSage px-6 pb-8 pt-8"
+      class="flex flex-col items-center bg-primary-OlderSage px-6 pb-8 pt-8 mt-[-2px]"
     >
       <div
         class="taos:translate-y-[25px] taos:opacity-0 flex flex-col gap-6 duration-[1000ms]"
@@ -265,9 +265,9 @@
     <!-- detil acara -->
     <section id="acara" class="flex flex-col items-center bg-neutral-White">
       <div>
-        <img src="../public/images/wave-reversed.png" />
+        <img src="../public/images/abstract-wave-reversed.png" />
       </div>
-      <div class="flex flex-col items-center gap-10 px-6 pb-12 pt-10">
+      <div class="flex flex-col items-center gap-10 px-6 pb-12 pt-12">
         <!-- hari menuju acara -->
         <div
           class="taos:translate-y-[25px] taos:opacity-0 flex flex-col items-center gap-6 duration-[1000ms]"
@@ -337,19 +337,19 @@
           </p>
 
           <div
-            class="taos:translate-y-[25px] taos:opacity-0 flex flex-col items-center gap-2 text-center duration-[1000ms]"
+            class="taos:translate-y-[25px] taos:opacity-0 flex flex-col items-center gap-4 text-center duration-[1000ms]"
             data-taos-offset="100"
           >
             <p class="Heading2 font-outline-OlderSage text-primary-OlderSage">
               AKAD NIKAH DAN SYUKURAN PERNIKAHAN
             </p>
             <div
-              class="flex flex-col items-center text-center text-neutral-Black"
+              class="flex flex-col items-center text-center text-Heading4 font-byp text-primary-Olive"
             >
-              <p class="BodyBold">SABTU, 4 NOVEMBER 2023</p>
-              <p class="BodyBold">10.00 - 12.00 WIB</p>
-              <p class="BodyBold">Resto Pesta Keboen</p>
-              <p class="Body">Jalan Veteran No.29, Kota Semarang</p>
+              <p class="font-outline-darker-Olive">SABTU, 4 NOVEMBER 2023</p>
+              <p class="font-outline-darker-Olive">10.00 - 12.00 WIB</p>
+              <p class="font-outline-darker-Olive">RESTORAN PESTA KEBOEN</p>
+              <p class="font-lato">Jalan Veteran No.29, Kota Semarang</p>
             </div>
           </div>
         </div>
@@ -366,7 +366,7 @@
           <div id="map" class="h-40 w-72"></div>
           <button
             id="view-location"
-            class="BodyBold inline-flex animate-jump items-center rounded-xl bg-primary-OlderSage px-3 py-2 text-neutral-White animate-delay-500 animate-duration-1000 animate-twice animate-ease-out hover:bg-primary-Olive"
+            class="BodyBold inline-flex animate-jump items-center rounded-xl bg-secondary-Brl-03 px-3 py-2 text-neutral-White animate-delay-500 animate-duration-1000 animate-twice animate-ease-out hover:bg-secondary-Brl-04"
             href="#"
             onclick=""
           >
@@ -468,33 +468,42 @@
               />
             </div>
             <!-- konfirmasi dan jumlah orang -->
-            <div class="flex w-full items-center gap-4">
+            <div class="flex w-full items-center gap-4 justify-between">
               <!-- konfirmasi -->
-              <div class="flex w-full flex-col items-start gap-2">
+              <div class="flex w-6/12 flex-col items-start gap-2">
                 <p class="BodyBold text-neutral-Black">Konfirmasi Kehadiran</p>
                 <select
                   name="kehadiran"
                   id="kehadiran"
-                  placeholder="Hadir atau Tidak?"
+                  onchange="enableGuestNum()"
                   class="Body h-32.2 w-full rounded-lg border border-solid border-secondary-Brl-03 bg-white px-2 py-1 focus:border-primary-OlderSage focus:outline-none focus:ring-2 focus:ring-primary-MatchaFade"
                 >
-                  <option value="hadir">Hadir</option>
-                  <option value="tidak-hadir">Tidak Hadir</option>
+                  <option selected value='not-selected' id="pilih-kehadiran">Hadir atau tidak?</option>
+                  <option value='present' id="hadir">Hadir</option>
+                  <option value='absent' id="tidak-hadir">Tidak Hadir</option>
                 </select>
               </div>
               <!-- jumlah orang -->
-              <div class="flex-center flex flex-col gap-2">
+              <div class="flex-center w-6/12 flex flex-col gap-2">
                 <p class="BodyBold text-neutral-Black">Jumlah Orang</p>
-                <select
+                <input
+                  type="number"
+                  id="jml-orang"
+                  placeholder="Jumlah orang"
+                  max="10"
+                  min="1"
+                  disabled
+                  class="Body w-full h-[32.2px] rounded-lg border border-solid border-neutral-Grey px-2 py-1 focus:border-primary-OlderSage focus:outline-none focus:ring-2 focus:ring-primary-MatchaFade" 
+                />
+                <!-- <select
                   name="jml-orang"
                   id="jml-orang"
                   placeholder="Jumlah Orang"
                   class="Body h-32.2 w-full rounded-lg border border-solid border-secondary-Brl-03 bg-white px-2 py-1 focus:border-primary-OlderSage focus:outline-none focus:ring-2 focus:ring-primary-MatchaFade"
                 >
-                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="1">2</option>
-                </select>
+                </select> -->
               </div>
             </div>
             <!-- Ucapan&Doa -->
@@ -512,8 +521,7 @@
               <button
                 id="submit-wish"
                 class="BodyBold w-full rounded-xl bg-secondary-Brl-03 px-3 py-2 text-center text-neutral-White hover:bg-secondary-Brl-04"
-                href="#"
-                onclick=""
+                onclick="sendWish()"
               >
                 Kirim
               </button>
@@ -640,7 +648,7 @@
       class="fixed bottom-3 left-12 z-10 hidden h-8 w-8 animate-fade-up items-center justify-center rounded-full bg-secondary-Brl-02 text-xs text-white drop-shadow-lg animate-duration-300 animate-once animate-ease-out hover:bg-secondary-Brl-03 hover:drop-shadow-2xl"
       type="button"
       data-status="true"
-      data-url="songs/Biru.mp3"
+      data-url="songs/DaveKoz-CinemaParadisoSuite.mp3"
     >
       <i class="fa-solid fa-volume-high"></i>
       <!-- <i class="fa-solid fa-volume-xmark"></i> -->

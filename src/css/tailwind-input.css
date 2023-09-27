@@ -69,6 +69,10 @@
   .font-outline-sand-half {
     -webkit-text-stroke: 0.5px #f7e4bd;
   }
+
+  .font-outline-darker-Olive {
+    -webkit-text-stroke: 0.5px #46553b;
+  }
 }
 
 @layer components {
