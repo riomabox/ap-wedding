@@ -534,7 +534,7 @@ const comment = (() => {
   // OK
   const renderCard = (data) => {
     const DIV = document.createElement("div");
-    DIV.classList.add("px-1");
+    DIV.classList.add("w-full");
     DIV.innerHTML = `
       <div
       class="taos:translate-y-[25px] taos:op acity-0 flex w-full max-w-107 flex-col items-start gap-4 rounded-4xl bg-neutral-White px-6 py-5 duration-[1000ms]"
