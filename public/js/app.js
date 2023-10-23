@@ -132,11 +132,7 @@ const bukaUndangan = async () => {
   };
 
   setTimeout(BukaUndanganClicked, 1500);
-  // document.getElementById('tombol-musik').style.display = 'block';
-  // audio.play();
-  // AOS.init();
-  // await login();
-  // timer();
+
 
   const timer = () => {
     let weddingDate = document
@@ -189,17 +185,6 @@ const copyText = (button) => {
   }, 1500);
 };
 window.copyText = copyText;
-
-// const enableGuestNum = () => {
-//   if (kehadiran.value === "present") {
-//     jumlahOrang.disabled = false;
-//     jumlahOrang.style.borderColor = "#B49349";
-//   } else {
-//     jumlahOrang.disabled = true;
-//     jumlahOrang.style.borderColor = "#B8B2A4";
-//   }
-// };
-// window.enableGuestNum = enableGuestNum;
 
 const progressBar = (() => {
   let bar = document.getElementById("bar");
@@ -262,8 +247,6 @@ const opacity = () => {
         document.getElementById("loadPage").style.opacity = op;
       } else {
         clearInterval(clear);
-        // document.getElementById("loadPage").remove();
-        // document.getElementById("dialog").classList.add("animate-fade");
       }
     }, 10);
   });
@@ -297,7 +280,6 @@ const pagination = (() => {
     } else {
       button.disabled = false;
     }
-    // button.disabled = false;
     button.innerHTML = tmp;
   };
 
@@ -363,7 +345,6 @@ const comment = (() => {
   const jumlahOrang = document.getElementById("jml-orang");
   const formUcapan = document.getElementById("form-ucapan");
   const submitWish = document.getElementById("submit-wish");
-  // const balas = document.getElementById('balas');
   const batal = document.getElementById("batal");
   const sunting = document.getElementById("ubah");
   let tempID = null;
@@ -373,7 +354,6 @@ const comment = (() => {
     submitWish.style.display = "block";
     kehadiran.style.display = "block";
     batal.style.display = "none";
-    // balas.style.display = 'none';
     sunting.style.display = "none";
     jumlahOrang.style.display = "block";
     document.getElementById("label-konfirmasi").style.display = "block";
@@ -491,62 +471,6 @@ const comment = (() => {
     submitWish.innerHTML = tmp;
   };
 
-  //COMMENTED, EDIT LATER
-  // OK
-  // const balasan = async (button) => {
-  //     button.disabled = true;
-  //     let tmp = button.innerText;
-  //     button.innerText = 'Loading...';
-
-  //     let id = button.getAttribute('data-uuid');
-  //     let token = localStorage.getItem('token') ?? '';
-
-  //     if (token.length == 0) {
-  //         alert('Terdapat kesalahan, token kosong !');
-  //         window.location.reload();
-  //         return;
-  //     }
-
-  //     const BALAS = document.getElementById('balasan');
-  //     BALAS.innerHTML = renderLoading(1);
-  //     hadiran.style.display = 'none';
-  //     document.getElementById('label-kehadiran').style.display = 'none';
-
-  //     await request('GET', '/api/comment/' + id)
-  //         .token(token)
-  //         .then((res) => {
-  //             if (res.code == 200) {
-  //                 kirim.style.display = 'none';
-  //                 batal.style.display = 'block';
-  //                 balas.style.display = 'block';
-
-  //                 tempID = id;
-
-  //                 BALAS.innerHTML = `
-  //                 <div class="my-3">
-  //                     <label class="form-label">Balasan</label>
-  //                     <div id="id-balasan" data-uuid="${id}" class="card-body bg-light shadow p-3 rounded-4">
-  //                         <div class="d-flex flex-wrap justify-content-between align-items-center">
-  //                             <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
-  //                                 <strong>${escapeHtml(res.data.nama)}</strong>
-  //                             </p>
-  //                             <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">${res.data.created_at}</small>
-  //                         </div>
-  //                         <hr class="text-dark my-1">
-  //                         <p class="text-dark m-0 p-0" style="white-space: pre-line">${escapeHtml(res.data.komentar)}</p>
-  //                     </div>
-  //                 </div>`;
-  //             }
-  //         })
-  //         .catch((err) => {
-  //             resetForm();
-  //             alert(`Terdapat kesalahan: ${err}`);
-  //         });
-
-  //     document.getElementById('ucapan').scrollIntoView({ behavior: 'smooth' });
-  //     button.disabled = false;
-  //     button.innerText = tmp;
-  // };
 
   // OK
   const innerComment = (data) => {
@@ -610,7 +534,7 @@ const comment = (() => {
   // OK
   const renderCard = (data) => {
     const DIV = document.createElement("div");
-    DIV.classList.add("px-3");
+    DIV.classList.add("px-1");
     DIV.innerHTML = `
       <div
       class="taos:translate-y-[25px] taos:op acity-0 flex w-full max-w-107 flex-col items-start gap-4 rounded-4xl bg-neutral-White px-6 py-5 duration-[1000ms]"
@@ -731,73 +655,6 @@ const comment = (() => {
 
     return result;
   };
-
-  // OK
-  // const reply = async () => {
-  //     let nama = formnama.value;
-  //     let komentar = formpesan.value;
-  //     let token = localStorage.getItem('token') ?? '';
-  //     let id = document.getElementById('id-balasan').getAttribute('data-uuid');
-
-  //     if (token.length == 0) {
-  //         alert('Terdapat kesalahan, token kosong !');
-  //         window.location.reload();
-  //         return;
-  //     }
-
-  //     if (nama.length == 0) {
-  //         alert('nama tidak boleh kosong');
-  //         return;
-  //     }
-
-  //     if (nama.length >= 35) {
-  //         alert('panjangan nama maksimal 35');
-  //         return;
-  //     }
-
-  //     if (komentar.length == 0) {
-  //         alert('pesan tidak boleh kosong');
-  //         return;
-  //     }
-
-  //     formnama.disabled = true;
-  //     formpesan.disabled = true;
-
-  //     batal.disabled = true;
-  //     balas.disabled = true;
-  //     let tmp = balas.innerHTML;
-  //     balas.innerHTML = `<span class="spinner-border spinner-border-sm me-1"></span>Loading...`;
-
-  //     let isSuccess = false;
-  //     await request('POST', '/api/comment')
-  //         .token(token)
-  //         .body({
-  //             nama: nama,
-  //             id: id,
-  //             komentar: komentar
-  //         })
-  //         .then((res) => {
-  //             if (res.code == 201) {
-  //                 isSuccess = true;
-  //                 owns.set(res.data.uuid, res.data.own);
-  //             }
-  //         })
-  //         .catch((err) => {
-  //             alert(`Terdapat kesalahan: ${err}`);
-  //         });
-
-  //     if (isSuccess) {
-  //         await ucapan();
-  //         document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'center' });
-  //         resetForm();
-  //     }
-
-  //     batal.disabled = false;
-  //     balas.disabled = false;
-  //     balas.innerHTML = tmp;
-  //     formnama.disabled = false;
-  //     formpesan.disabled = false;
-  // };
 
   // OK
   const ubah = async () => {
@@ -976,7 +833,6 @@ const comment = (() => {
       });
 
     button.disabled = false;
-    // button.innerText = tmp;
     button.innerHTML = tmp2;
   };
 
@@ -993,8 +849,6 @@ const comment = (() => {
     edit: edit,
     ubah: ubah,
 
-    // balasan: balasan,
-    // reply: reply,
     batal: () => {
       if (tempID) {
         document

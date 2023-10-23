@@ -1295,6 +1295,11 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   padding-bottom: 1.5rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1373,6 +1378,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .leading-none {
