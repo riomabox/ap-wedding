@@ -1506,16 +1506,12 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   animation-delay: 1400ms;
 }
 
-.animate-delay-\[700ms\] {
-  animation-delay: 700ms;
-}
-
 .animate-delay-\[500ms\] {
   animation-delay: 500ms;
 }
 
-.animate-delay-\[300ms\] {
-  animation-delay: 300ms;
+.animate-delay-\[700ms\] {
+  animation-delay: 700ms;
 }
 
 .animate-duration-1000 {
