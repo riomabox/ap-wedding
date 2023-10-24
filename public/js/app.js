@@ -1,6 +1,9 @@
 const root = document.getElementsByTagName("html")[0];
 root.setAttribute("class", "bg-primary-SageBase");
 
+let type = new URLSearchParams(window.location.search).get("type") ?? "";
+
+
 const audio = (() => {
   let instance = null;
 
@@ -96,12 +99,10 @@ const bukaUndangan = async () => {
   const hamburgerBtn = document.getElementById("hamburger-button");
   const soundBtn = document.getElementById("sound-button");
   document.getElementById("open-invitation-button").disabled = true;
-  const undanganTitle = document.getElementById("undangan-title");
-  const namaTitle = document.getElementById("nama-title");
-  const tanggalTitle = document.getElementById("tanggal-title");
   document.getElementById("open-invitation-img").src =
     "../public/icons/loading-spinner.svg";
   document.getElementById("open-invitation-img").classList.add("animate-spin");
+
 
   const BukaUndanganClicked = async () => {
     body.classList.remove("overflow-hidden");
@@ -109,23 +110,42 @@ const bukaUndangan = async () => {
     modalHomepage.classList.add("top-[-100vh]");
     hamburgerBtn.classList.remove("hidden");
     soundBtn.classList.remove("hidden");
-    undanganTitle.classList.add(
-      "animate-fade-up",
-      "animate-duration-1000",
-      "animate-once",
-    );
-    namaTitle.classList.add(
-      "animate-fade-up",
-      "animate-duration-1000",
-      "animate-once",
-      "animate-delay-[700ms]",
-    );
-    tanggalTitle.classList.add(
-      "animate-fade-up",
-      "animate-duration-1000",
-      "animate-once",
-      "animate-delay-[1400ms]",
-    );
+
+    if(type==='2') {
+      const subcoverIntro = document.getElementById("subcover-intro");
+
+      subcoverIntro.classList.add(
+        "animate-fade-up",
+        "animate-duration-1000",
+        "animate-once",
+        "animate-delay-[500ms]",
+      );
+
+    } else {
+      const undanganTitle = document.getElementById("undangan-title");
+      const namaTitle = document.getElementById("nama-title");
+      const tanggalTitle = document.getElementById("tanggal-title");
+
+      undanganTitle.classList.add(
+        "animate-fade-up",
+        "animate-duration-1000",
+        "animate-once",
+      );
+      namaTitle.classList.add(
+        "animate-fade-up",
+        "animate-duration-1000",
+        "animate-once",
+        "animate-delay-[700ms]",
+      );
+      tanggalTitle.classList.add(
+        "animate-fade-up",
+        "animate-duration-1000",
+        "animate-once",
+        "animate-delay-[1400ms]",
+      );
+    }
+
+
     audio.play();
     await login();
     comment.reset();
@@ -597,11 +617,6 @@ const comment = (() => {
       .catch((err) => alert(`Terdapat kesalahan: ${err}`));
 
     let jumlahComment = await numOfComment();
-    console.log(
-      `data : ${
-        pagination.getPer() + pagination.getNext()
-      }, jumlah : ${jumlahComment}`,
-    );
     if (pagination.getPer() + pagination.getNext() >= jumlahComment) {
       document.getElementById("selanjutnya").disabled = true;
     }
@@ -981,12 +996,45 @@ window.addEventListener(
     let modal = document.getElementById("dialog");
     let name = new URLSearchParams(window.location.search).get("to") ?? "";
 
-    if (name.length == 0) {
+    if (name.length === 0) {
       document.getElementById("tujuan-tamu").remove();
     } else {
       let namaTamu = document.getElementById("nama-tamu");
       namaTamu.innerText = escapeHtml(name);
-      // document.getElementById("formnama").value = name;
+      document.getElementById("nama").value = escapeHtml(name);
+      console.log(document.getElementById("nama").value);
+    }
+
+    if (type.length !== 0) {
+      console.log(type);
+      if(type === "1") {
+        console.log(`type ${type}`);
+        document.getElementById("rekening").remove();
+      } else if(type==="2") {
+        document.getElementById('subcover-intro').innerHTML = `
+        <div class="flex flex-col items-center gap-10 px-6 pb-12 pt-10">
+        <img src="../public/images/basmalah-white.png" width="125px" />
+        <p class="Body text-neutral-White">
+          Assalamu’alaikum warahmatullah wabarakatuh
+        </p>
+        <p class="Body text-neutral-White">
+          Sebuah kehormatan bagi kami dapat mengumumkan kabar bahagia pada
+          hari ini. Tanpa mengurangi rasa hormat, kami mohon maaf tidak bisa
+          mengundang Bapak/Ibu/Saudara/i secara langsung dalam acara
+          pernikahan kami. Tetapi kami tetap memohon doa restu untuk
+          keberlangsungan acara pernikahan kami.
+        </p>
+      </div>
+        `;
+        document.getElementById('couple-intro').innerHTML = `
+        <p class="Body text-neutral-Black">
+        Dengan memohon Rahmat dan Ridho Allah Subhanahu Wa Ta’ala, kami
+        bermaksud menyelenggarakan acara pernikahan kami:
+      </p>
+        `;
+        document.getElementById('info-lokasi-acara').remove();
+        document.getElementById('rekening').remove();
+      }
     }
 
     setInterval(() => {

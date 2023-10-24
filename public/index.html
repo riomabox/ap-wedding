@@ -152,31 +152,33 @@
           alt="floralornament-secondcover"
         />
       </div>
-      <div class="flex max-w-40 flex-col items-center gap-16">
-        <!-- undangan pernikahan -->
-        <div id="undangan-title">
-          <p
-            class="Heading5 font-outline-beige text-center tracking-0.24 text-secondary-Brl-02"
+      <div id="subcover-intro">
+        <div class="flex max-w-40 flex-col items-center gap-16">
+          <!-- undangan pernikahan -->
+          <div id="undangan-title">
+            <p
+              class="Heading5 font-outline-beige text-center tracking-0.24 text-secondary-Brl-02"
+            >
+              UNDANGAN PERNIKAHAN
+            </p>
+          </div>
+          <!-- nama pengantin -->
+          <div
+            class="MainTitle font-outline-white flex flex-col gap-2 text-neutral-White"
+            id="nama-title"
           >
-            UNDANGAN PERNIKAHAN
-          </p>
-        </div>
-        <!-- nama pengantin -->
-        <div
-          class="MainTitle font-outline-white flex flex-col gap-2 text-neutral-White"
-          id="nama-title"
-        >
-          <p>AGHNIA</p>
-          <p class="SubTitle">&</p>
-          <p>PUTRO</p>
-        </div>
-        <!-- tanggal -->
-        <div id="tanggal-title">
-          <p
-            class="Heading4 font-outline-beige text-center text-secondary-Brl-02"
-          >
-            4 November 2023
-          </p>
+            <p>AGHNIA</p>
+            <p class="SubTitle">&</p>
+            <p>PUTRO</p>
+          </div>
+          <!-- tanggal -->
+          <div id="tanggal-title">
+            <p
+              class="Heading4 font-outline-beige text-center text-secondary-Brl-02"
+            >
+              4 November 2023
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -191,9 +193,19 @@
       <!-- main content -->
       <div class="flex flex-col items-center gap-10 px-6 pb-12 pt-10">
         <!-- opening  -->
+        <!-- <div
+          class="taos:translate-y-[25px] taos:opacity-0 flex w-full flex-col items-center gap-6 text-center duration-[1000ms]"
+          data-taos-offset="200"
+        >
+          <p class="Body text-neutral-Black">
+            Dengan memohon Rahmat dan Ridho Allah Subhanahu Wa Ta’ala, kami
+            bermaksud menyelenggarakan acara pernikahan kami:
+          </p>
+        </div> -->
         <div
           class="taos:translate-y-[25px] taos:opacity-0 flex w-full flex-col items-center gap-6 text-center duration-[1000ms]"
           data-taos-offset="200"
+          id="couple-intro"
         >
           <img
             src="../public/images/wedding-ring.png"
@@ -372,6 +384,7 @@
         <div
           class="taos:translate-y-[25px] taos:opacity-0 flex flex-col items-center gap-6 duration-[1000ms]"
           data-taos-offset="100"
+          id="info-lokasi-acara"
         >
           <p class="Heading1 font-outline-brown-half text-secondary-Brl-04">
             Lokasi Acara
@@ -399,6 +412,7 @@
         <div
           class="taos:translate-y-[25px] taos:opacity-0 flex flex-col items-center gap-6 duration-[1000ms]"
           data-taos-offset="200"
+          id="rekening"
         >
           <p class="Heading1 font-outline-sand-half text-secondary-Brl-01">
             Tanda Kasih
@@ -487,7 +501,10 @@
             <!-- konfirmasi dan jumlah orang -->
             <div class="flex w-full items-center justify-between gap-4">
               <!-- konfirmasi -->
-              <div class="flex w-6/12 flex-col items-start gap-2">
+              <div
+                class="flex w-6/12 flex-col items-start gap-2"
+                id="konfirmasi-kehadiran"
+              >
                 <p class="BodyBold text-neutral-Black" id="label-konfirmasi">
                   Konfirmasi Kehadiran
                 </p>
@@ -505,7 +522,10 @@
                 </select>
               </div>
               <!-- jumlah orang -->
-              <div class="flex-center flex w-6/12 flex-col gap-2">
+              <div
+                class="flex-center flex w-6/12 flex-col gap-2"
+                id="konfirmasi-orang"
+              >
                 <p class="BodyBold text-neutral-Black" id="label-jumlah">
                   Jumlah Orang
                 </p>
