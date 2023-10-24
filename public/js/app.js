@@ -563,13 +563,6 @@ const comment = (() => {
         <div class="flex w-full items-center justify-between gap-16">
           <div class="flex items-center gap-2">
             <p class="BodyBold text-neutral-Black">${escapeHtml(data.nama)}</p>
-            ${
-              type !== "2" || !owns.has(data.uuid)
-                ? data.hadir
-                  ? '<img src="../public/icons/check.svg" alt="hadir" width="16px" />'
-                  : '<img src="../public/icons/delete.svg" alt="hadir" width="16px" />'
-                : ""
-            }
           </div>
           <p class="BodyItalicSmall text-neutral-Black">${data.created_at}</p>
         </div>
