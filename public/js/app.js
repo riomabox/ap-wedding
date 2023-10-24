@@ -373,7 +373,9 @@ const comment = (() => {
     batal.style.display = "none";
     sunting.style.display = "none";
     jumlahOrang.style.display = "block";
-    document.getElementById("label-konfirmasi").style.display = "block";
+    if (type !== "2") {
+      document.getElementById("label-konfirmasi").style.display = "block";
+    }
     document.getElementById("balasan").innerHTML = null;
     nama.value = null;
     kehadiran.value = "not-selected";
@@ -415,10 +417,12 @@ const comment = (() => {
       return;
     }
 
-    if (kehadiran.value === "not-selected") {
-      alert("Silahkan isi kehadiran");
-      flagForm = false;
-      return;
+    if (type !== "2") {
+      if (kehadiran.value === "not-selected") {
+        alert("Silahkan isi kehadiran");
+        flagForm = false;
+        return;
+      }
     }
 
     if (kehadiran.value === "absent") {
@@ -560,9 +564,11 @@ const comment = (() => {
           <div class="flex items-center gap-2">
             <p class="BodyBold text-neutral-Black">${escapeHtml(data.nama)}</p>
             ${
-              data.hadir
-                ? '<img src="../public/icons/check.svg" alt="hadir" width="16px" />'
-                : '<img src="../public/icons/delete.svg" alt="hadir" width="16px" />'
+              type !== "2" || !owns.has(data.uuid)
+                ? data.hadir
+                  ? '<img src="../public/icons/check.svg" alt="hadir" width="16px" />'
+                  : '<img src="../public/icons/delete.svg" alt="hadir" width="16px" />'
+                : ""
             }
           </div>
           <p class="BodyItalicSmall text-neutral-Black">${data.created_at}</p>
@@ -825,14 +831,17 @@ const comment = (() => {
             jumlahOrang.style.display = "none";
           } else {
             kehadiran.value = res.data.hadir ? "present" : "absent";
-            document.getElementById("label-konfirmasi").style.display = "block";
-            kehadiran.style.display = "block";
-            jumlahOrang.value = res.data.jumlah;
-            document.getElementById("label-jumlah").style.display = "block";
-            jumlahOrang.style.display = "block";
-            kehadiran.value === "present"
-              ? (jumlahOrang.disabled = false)
-              : (jumlahOrang.disabled = true);
+            if (type !== "2") {
+              document.getElementById("label-konfirmasi").style.display =
+                "block";
+              kehadiran.style.display = "block";
+              jumlahOrang.value = res.data.jumlah;
+              document.getElementById("label-jumlah").style.display = "block";
+              jumlahOrang.style.display = "block";
+              kehadiran.value === "present"
+                ? (jumlahOrang.disabled = false)
+                : (jumlahOrang.disabled = true);
+            }
           }
           document
             .getElementById("write-wish")
@@ -1023,8 +1032,10 @@ window.addEventListener(
         bermaksud menyelenggarakan acara pernikahan kami:
       </p>
         `;
+        document.getElementById("undang-tamu").remove();
         document.getElementById("info-lokasi-acara").remove();
         document.getElementById("rekening").remove();
+        document.getElementById("konfirmasi").remove();
       }
     }
 
