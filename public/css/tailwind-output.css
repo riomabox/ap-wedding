@@ -887,6 +887,22 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
   height: 100vh;
 }
 
+.h-\[calc\(100\%-theme\(space\.24\)\)\] {
+  height: calc(100% - 6rem);
+}
+
+.h-\[calc\(100vh-1rem\)\] {
+  height: calc(100vh - 1rem);
+}
+
+.h-auto {
+  height: auto;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
 .w-11\/12 {
   width: 91.666667%;
 }
@@ -1104,6 +1120,10 @@ html.js :where([class*="taos:"]:not(.taos-init)) {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .rounded-2xl {
